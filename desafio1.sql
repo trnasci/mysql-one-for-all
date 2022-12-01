@@ -23,7 +23,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
 
   CREATE TABLE SpotifyClone.seguindo_artista(
       id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-      artista_id INT NOT NULL,
+      artista_id INT,
       usuario_id INT NOT NULL,
       FOREIGN KEY (artista_id) REFERENCES artista (id),
       FOREIGN KEY (usuario_id) REFERENCES usuario (id)
@@ -127,3 +127,20 @@ VALUES
   ('4', '8', '2012-03-17 14:56:41'),
   ('9', '9', '2022-02-24 21:14:22'),
   ('3', '10', '2015-12-13 08:30:22');
+
+  INSERT INTO SpotifyClone.seguindo_artista (artista_id, usuario_id)
+VALUES
+  ('1', '1'),
+  ('2', '1'),
+  ('3', '1'),
+  ('1', '2'),
+  ('3', '2'),
+  ('2', '3'),
+  ('4', '4'),
+  ('5', '5'),
+  ('6', '5'),
+  (NULL, '6'),
+  ('6', '7'),
+  (NULL, '8'),
+  ('3', '9'),
+  (NULL, '10');
