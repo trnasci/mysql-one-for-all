@@ -42,7 +42,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
       nome VARCHAR(100) NOT NULL,
       artista_id INT NOT NULL,
       album_id INT NOT NULL,
-      duracao_segundos VARCHAR(5),
+      duracao_segundos INT,
       FOREIGN KEY (artista_id) REFERENCES artista (id),
       FOREIGN KEY (album_id) REFERENCES album (id)
   ) engine = InnoDB;
